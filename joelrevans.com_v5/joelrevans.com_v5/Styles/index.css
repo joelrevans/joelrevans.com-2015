@@ -1,0 +1,303 @@
+﻿body {
+    display:block;
+    height:100%;
+    max-width:900px;
+    margin:auto;
+    font-family: Calibri, Helvetica, sans-serif;
+    padding:0 10px 20px 10px;
+}
+
+img, iframe {
+    border:none;
+}
+
+#Resume {
+    text-align:center;
+}
+
+#ResumeContainer {
+    width:100%;
+    /*overflow:scroll;*/
+    -webkit-overflow-scrolling:touch;
+    margin:10px 0;
+}
+
+#ResumeEmbed {
+    height:7in;
+    /*A fix for an iframe width bug present on IOS.*/
+    min-width:100%;
+    width:0px;
+    overflow:hidden;
+}
+
+section > h1:first-child, article > h1:first-child {
+    color:white;
+    background-color:#444;
+    font-weight:normal;
+    
+    height:40px;
+    font-size:25px;
+    line-height:40px;
+    margin:0;
+    padding:0 0 0 33px;
+    text-transform:uppercase;
+
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+section > article > h1:first-child, 
+section > section > h1:first-child {
+    border-left:232px solid #888;
+    transition:border-left ease-in-out 0.5s;
+}
+
+.BigBlueButton {
+    display:inline-block;
+    background-color:#6666FF;
+    color:white;
+    padding:7px 10px;
+    font-size:18px;
+    margin:0 20px 10px 0;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+#ViewGame div {
+    float:left;
+    margin-top:1em;
+    margin-bottom:20px;
+}
+
+#ViewGame object {
+    display:none;
+    transition:max-height ease 1s;
+    background:black;
+}
+
+#ResumeEmbed {
+    max-width:8.5in;
+}
+
+nav {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    max-height:40px;
+    /*z-index:2;*/
+
+    overflow:hidden;
+
+    background:#444;
+    color:grey;
+    font-size:25px;
+    padding-left:20px;
+    padding-left:calc(50% - 450px);
+
+    white-space:nowrap;
+    transition:max-height ease-in-out 0.5s;
+}
+
+#navicon {
+    position:relative;
+    font-size:40px;
+    color:white;
+    line-height:40px;
+    z-index:999;
+    background:#444;
+}
+
+nav:hover{
+    max-height:1000px;
+}
+
+#navshield {
+    position:fixed;
+    top:0;
+    right:calc(50% + 425px);
+    width:100%;
+    height:1000px;
+    z-index:4;
+    display:none;
+}
+
+nav:active + #navshield {
+    display:inline-block;
+}
+
+#navshield:hover {
+    display:inline-block;
+}
+
+#navshield:active {
+    pointer-events:none;
+}
+
+nav:hover ul{
+    margin-top:0 !important;
+    max-height:1000px;
+    transition:margin-top ease-in-out 500ms;
+}
+
+nav ul ul > li:first-child {
+    transition:margin-top ease-in-out 500ms;
+}
+
+nav:hover ul ul > li:first-child{
+    margin-top:0px !important;
+}
+
+nav ul{
+    list-style-type:none;
+    display:inline-block;
+    vertical-align:top;
+    text-align:left;
+    transition:margin-left ease-in-out 500ms, margin-top ease-in-out 500ms, visibility linear 500ms;
+    padding:0 8px 8px 8px;
+}
+
+nav > ul{
+    position:relative;
+    margin:0;
+}
+
+nav > ul > li:first-child > a{
+    color:white;
+}
+
+nav > ul ul{
+    visibility:collapse;
+    position:absolute;
+    top:0;
+    padding:0;
+    margin-left:20px;
+    left:245px;
+}
+
+nav li:hover > a {
+    color:white;
+}
+
+nav > h1 {
+    display:inline-block;
+    font-size:inherit;
+    margin:8px 0 0 0;
+    font-weight:normal;
+    padding:0;
+}
+
+nav a {
+    text-transform:uppercase;
+    color:grey;
+    text-decoration:none;
+    line-height:40px;
+    overflow:hidden;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+nav li {
+    overflow:hidden;
+}
+
+#ThumbnailerDemo {
+    overflow:hidden;
+}
+
+#ThumbnailerDemo input[name='width'], #ThumbnailerDemo input[name='height']{
+    width:50px;
+}
+
+ #ThumbnailerDemo #TypeLabel {
+    margin-right:15px;
+}
+
+#ThumbnailerDemo input[type='radio'] {
+    margin-right:20px;
+}
+
+#ThumbnailerDemo #DemoError {
+    background-color:maroon;
+    color:white;
+    margin:10px 0;
+}
+
+#ThumbnailerDemo img{
+    max-height:900px;
+    max-width:900px;
+}
+
+.visible{
+    visibility:visible;
+}
+
+.white{
+    color:white;
+}
+
+@media (max-width: 935px) {
+    nav {
+        padding-left:20px;
+    }
+
+    #navshield {
+        left:0px;
+        width:45px;
+        right:auto;
+    }
+
+    section > h1:first-child, article >h1:first-child{
+        padding-left:45px;
+    }
+}
+
+@media (max-width: 650px) { /*The point at which the secondary title bars are cut off on the right side.*/
+
+    nav > ul {
+        width:auto;
+        direction:rtl;
+    }
+
+    nav:hover{
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        /*pointer-events:none;*/
+    }
+
+    nav:hover > ul{
+        height:100%;
+        overflow-y:auto;
+        overflow-x:hidden;
+    }
+
+    nav:hover > ul ul{
+        margin-left:20px;
+        display:block;
+    }
+
+    nav > ul ul{
+        display:inline-block;
+        position:static;
+        margin-left:0;
+        margin-right:650px;
+        visibility:visible;
+    }
+
+    time {
+        display:none;
+    }
+
+    section > article > h1:first-child, 
+    section > section > h1:first-child {
+        border-left:30px solid #888;
+        padding-left:16px;
+    }
+
+    nav ul ul > li:first-child {
+        margin-top:0px !important;
+    }
+}

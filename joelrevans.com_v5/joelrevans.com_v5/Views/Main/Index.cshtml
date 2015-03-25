@@ -1,0 +1,1151 @@
+﻿@{
+    Layout = null;
+}
+
+@using joelrevans.com_v5
+@using joelrevans.com_v5.Controllers
+@using System.Drawing.Imaging;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="Joel Evans is an engineering consultant located in Cincinnati, OH.  He is a senior level software developer
+            with experience in front and back-end web design, SQL, C# .NET and ASP.NET.  View his engineering portfolio, including
+            program code, automotive design, fabrication, and electronics.">
+    <meta charset="utf-8"> 
+    <title>Joel R. Evans &mdash;Engineer Extraordinaire</title>
+    <link href="/styles/index.css" rel="stylesheet" type="text/css"/>
+    <link href="/styles/photocarousel.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/index.js"></script>
+    <script src="/Scripts/photocarousel.js"></script>
+</head>
+<!--ontouchstart is a fix for iphone not respecting :active-->
+<body ontouchstart="">
+    <nav>
+        <span id="navicon">&#x2261;</span>
+        <ul>
+            <li>
+                <a href="#">Joel R. Evans</a>
+            </li>
+            <li>
+                <a href="#Resume">Resume</a>
+            </li>
+            <li>
+                <a href="#ElectricalDesign">Electrical Design</a>
+                <ul>
+                    <li>
+                        <a href="#DyeSynthesizer">Dye Synthesizer</a>
+                    </li>
+                    <li>
+                        <a href="#MicroOscilloscope">Micro Oscilloscope</a>
+                    </li>
+                    <li>
+                        <a href="#WidebandVoltmeter">Wideband Voltmeter</a>
+                    </li>
+                    <li>
+                        <a href="#LineInputVoltmeter">Line-In Voltmeter</a>
+                    </li>
+                    <li>
+                        <a href="#AudioRelaySwitch">Audio Relay Switch</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#ComputerScience">Computer Science</a>
+                <ul>
+                    <li>
+                        <a href="#Thumbnailer">Thumbnailer</a>
+                    </li>
+                    <li>
+                        <a href="#DataCompressor">Data Compressor</a>
+                    </li>
+                    <li>
+                        <a href="#ZombieCop">Zombie Cop</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#Automotive">Automotive</a>
+                <ul>
+                    <li>
+                        <a href="#CVTTransmission">CVT Transmission</a>
+                    </li>
+                    <li>
+                        <a href="#HondaS2000">Honda S2000</a>
+                    </li>
+                    <li>
+                        <a href="#NissanVersa">Nissan Versa</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="navshield"><!--Used to control nav pointer events.  Allows me to handle all hover/click events using CSS only.  Great for mobile.--></div>
+    <section>
+        <h1>Joel R. Evans</h1>
+        <p>
+            I am Joel R. Evans, a software developer and engineer consultant currently located in Cincinnati, OH.
+            I have consulted for many companies in Cincinnati and have acquired a considerable amount of experience in a variety of disciplines.
+            My ability to combine different technologies allows me to fabricate and produce many functionally complete systems that would ordinarily require
+            the involvement of several specialists.  What follows is my portfolio of personal projects from the last few years.
+        </p>
+    </section>
+    <section id="Resume">
+        <h1>Resume</h1>
+        <div id="resumeIcons">
+            <a href="/files/resume.docx" target="_blank"><img alt="DOCX" src="@ImageResizeController.GetDataURI("/images/doc-icon.png")"/></a>
+	        <a href="/files/resume.pdf" target="_blank"><img alt="PDF" src="@ImageResizeController.GetDataURI("/images/pdf-icon.png")" /></a>
+	        <a href="http://www.linkedin.com/pub/joel-evans/56/542/883" target="_blank"><img alt="LinkedIn" src="@ImageResizeController.GetDataURI("/images/linkedin-icon.png")" /></a>
+            <a href="/files/resume.html"><img alt="Printable" src="@ImageResizeController.GetDataURI("/images/print-icon.png")"></a>
+	    </div>
+        <div id="ResumeContainer">
+	        <iframe id="ResumeEmbed" src="/files/resume.html"></iframe>
+        </div>
+    </section>
+    <section id="ElectricalDesign">
+        <h1>Electrical Design</h1>
+        <article id="DyeSynthesizer">
+            <h1>
+                Dye Synthesizer <time datetime="2014-03">(2014)</time>
+            </h1>
+            <p>
+                The Metrochrome Dye Synthesizer is a system that a <a href="http://mikebosken.com" target="_blank">colleague</a> and I built over the course of a four-month period.  The purpose of the machine is to 
+                automate the production of dyed silks in small quantities, a process necessary for the preservation of historic textiles.
+            </p>
+            <h2>
+                Original Process
+            </h2>
+            <p>
+                The process upon which our machine is based is normally performed by a trained technician or conservator.  As a first step to begin designing a process,
+                it was necessary to produce a set of fabrics manually.  Dying silk can be very labor intensive and time consuming, and the necessary steps are outlined below:
+            </p>
+            <ul>
+                <li>
+                    Determine the weight of the fabric to be dyed.
+                </li>
+                <li>
+                    Produce a set of base dye solutions by weighing out the powdered dye and dilutingext=
+                    with a precise amount of water. A set of pH levelling additives must be included as well.
+                </li>
+                <li>
+                    Determine the desired color, consult a chromatic key or formula sheet to approximate your color.
+                </li>
+                <li>
+                    Mix the dyes in with the additives and then introduce the fabric.
+                </li>
+                <li>
+                    Begin heating the solution to 90&deg;C over the course of 20 minutes.
+                </li>
+                <li>
+                    Once the solution reaches 90&deg;C, hold at that temperature for another 30 minutes.
+                </li>
+                <li>
+                    Allow the solutions to cool and prepare to harvest the fabric.
+                </li>
+                <li>
+                    After the incubation period, the dyes should be nearly exhausted and will appear transparent.
+                </li>
+                <li>
+                    Rinse the chambers and fabric thoroughly.  Failure to clean properly may lead to contamination in future batches.
+                </li>
+                <li>
+                    Allow the fabrics to dry and iron when ready.
+                </li>
+            </ul>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image113.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image121.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image120.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image118.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image119.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image116.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image117.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image114.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image115.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Subsystem Determination
+            </h2>
+            <p>
+                After analysis and discussion, we were able to distill the process down into four basic subsystems:
+                <br /><br />
+                <b>Climate control</b> to accurately achieve and maintain the required temperature.  For this system we would need 
+                an appropriately sized heating element and feedback sensors to correct inaccuracies.
+                <br />
+                <b>Agitation</b> module to keep the dye concentration evenly distributed and prevent premature exhaustion.  This would
+                likely require an agitation motor, fluid pump, or actuator to reposition the chamber.
+                <br />
+                <b>Liquid disposal</b> system to drain the excess dye and allow the material to begin drying.  This system would require a valve
+                system or actuator to empty the container without flushing the fabric.
+                <br />
+                <b>Fluid mixing</b> to accurately meter the appropriate amounts of dye and additives into the incubation chamber.  This system
+                would require a pressurized injection system or volume measuring capabilities to accurately dispense fluid.
+            </p>
+            <h2>
+                Fluid Input Chambers
+            </h2>
+            <p>
+                We managed to pick up a box of acrylic testing chambers at a surplus sale.  The containers were used in a geological testing lab,
+                and still had a siginficiant mineral deposits.  They were inspected and cleaned thoroughly to avoid any contamination with the dyes.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image1.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image2.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image5.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image6.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image7.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image9.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image94.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image97.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image100.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Fluid Pressure System
+            </h2>
+            <p>
+                We managed to acquire a industrial-grade lab compressor which was both quiet and small enough to use indoors.
+                The compressor did not have a pressure control system, so an adjustable blowoff valve was the first attempt
+                at regulating the air pressure in the lines.  We were able to repurpose one of the acrylic lids to make the
+                attachment and and we used the same interface to connect the chambers in parallel to the source.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image101.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image102.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image8.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image95.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image96.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image10.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image98.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Dye Injection System
+            </h2>
+            <p>
+                In addition to pressurized fluid chambers, the machine needs a way of precisely metering liquid into the mixing chamber.
+                We acquired a set of high-performance automotive fuel injectors for that purpose.  Motorcycle injectors are low-flow, but
+                allow for extremely high switching speeds as they are often used in engines that reach 20,000RPM.  The injectors we
+                acquired are able to cycle more than 500 times a second, and have a maximum flow rating of 70cc/min.  This gives us the 
+                system extremely precise microliter level control over the fluid injection.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image103.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image13.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image104.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image105.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image106.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image14.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image107.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Frame and Mounting
+            </h2>
+            <p>
+                Needing a frame to mount the project to, I managed to acquire a nice oak cabinet at a thrift store.
+                Mounting our components proceeded quickly.
+            </p>
+             <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image15.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image16.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image17.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image19.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image21.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image24.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image25.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Incubation Chambers
+            </h2>
+            <p>
+                I took the opportunity to acquire a large quantity of stackable, hard plastic lab containers at another
+                surplus sale.  We decided to modify our original design to take advantage of the container stack-ability;
+                Instead of using agitator motors or pumps to keep the solution mixed, we took advantage of our common
+                air pressure line.  By stacking two containers and pressurizing the bottom, we could cause our fluid in 
+                the top container to bubble and diffuse.  We would need to prevent the fluid in the top container from
+                entering the bottom container, something that we can achieve with a hydrophobic filter.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image27.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image28.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image29.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image108.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image109.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image110.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image20.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image30.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Hydrophobic Filters
+            </h2>
+            <p>
+                After myriad product tests, we acquired two filters that had the potential to function as we needed.
+                One type of filter was intended for use on snowmobile and marine vehicles as a hydrophobic intake/vent cover, to prevent
+                water from entering the intake or exhaust of an engine.  The other was a medical-grade filter,
+                primarily used for membrane filtration and pressure equalization.  The filters had to meet two criteria:
+                they needed to be resistant to temperatures of up to 100&deg;C and they needed to allow air to pass while
+                rejecting all fluid.  The medical filters, being rated for 260&deg;C, were extremely resilient and had only
+                minor leaks (only when silicone was used).  The automotive vents held up well initially, but 
+                leaked badly when introduced to boiling water.
+            </p>
+             <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image32.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image111.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image31.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image33.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image40.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image41.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image42.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image43.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image44.jpg")</li>
+                </ul>
+            </div>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image35.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image36.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image34.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image37.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image38.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image39.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image45.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image46.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image47.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image51.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Temperature Control
+            </h2>
+            <p>
+                The dye curing process for silk requires that the fabric be incubated with the dye at 90&deg;C for at least thirty minutes.
+                If the temperature climbs too high, the silk may be damaged.  If the solution is not hot enough the process will take longer
+                and may negatively affect the lightfastness and dye absorption.  To achieve precise temperature measurement, we use the DS18B20
+                temperature probe.  This model of sensor is very unique because it outputs a digital signal.  A group of these sensors may be connected
+                in parallel to a single data wire, and will automatically organize themselves to serialize their communications over the bus.
+                They may also be operated without a power line, as they are efficient enough to run on the data signal alone.  The parallel bus was
+                instrumental in allowing us to run multiple chambers without surpassing the I/O limit of the controller.
+            </p>
+            <p>
+                For the heater output, we used automotive bulbs.  They were cheap, robust, and hot!  We chose bulbs for their radiant 
+                heat output, as we did not want to introduce anything into contact with the dye that might form deposits or cause
+                contamination between batches.  We did need to confirm that the bulbs would operate in a high humidity environment, however,
+                so we operated them underwater for a few hours before mounting.  To mount we used high-grade automotive silicone, designed 
+                to create gaskets for internal combustion engines.  The bulbs can easily exceed 300&deg;C.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image112.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image65.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image52.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image48.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image49.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image50.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image55.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image56.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image57.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image58.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Drain System
+            </h2>
+            <p>
+                After the silk has been incubated and the dye exhausted, the incubation chamber will automatically
+                drain any fluid that is left so that the silk may dry.  The drain solenoids are located in the
+                bottom chamber, which needs to be airtight so that it may pressurize and agitate the fluid in the upper
+                chamber.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image3.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image53.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image54.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image59.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image62.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image63.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image64.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image66.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Fluid Pressure System Revisions
+            </h2>
+            <p>
+                Once the system was pressuized, we discoverd that the original fluid management systems were very leaky and
+                hard to maintain.  The blowoff valve that we had planned to use was also leaky, and highly inaccurate.
+                The dye chambers were non-uniform in size and were very awkward to service.  We decided to replace the 
+                chambers with air-brush hoppers.  They were easy to fill and held a much larger volume in a much smaller footprint
+                than the previous chambers.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image68.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image70.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image71.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image72.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image73.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image74.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image75.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image69.jpg")</li>
+                </ul>
+            </div>
+
+            <h2>
+                Injector Flow Testing
+            </h2>
+            <p>
+                The injector flow had to be verified at our chosen pressure, so we measured the output of each injector
+                to determine the volume of fluid we would inject every second.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image4.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image86.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image85.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Controls
+            </h2>
+            <p>
+                We chose a raspberry pi as our controller becuase of its ability to handle GPIO as well as serve the
+                interface.  It saved us a significant amount of time and trouble in setting up and programming a secondary controller.
+                We used a bank of 16 relays to handle the output, with a single input for the four temperature sensors.  We are able
+                to run the peripherals on a 12V industrial supply while a DC/DC converter powers the PI and relay coils.
+            </p>
+            <div class="ImageCarousel">
+                <ul>                    
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image11.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image84.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image26.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image60.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image22.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image23.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image61.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image75.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image80.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Insulation
+            </h2>
+            <p>
+                Our tests indicated that the incubation chambers were not reaching the optimal curing temperature.
+                We molded a set of lids for the containers and carved a second set from insulative foam.  Each chamber
+                was then wrapped with reflective bubble wrap.
+            </p>
+            <div class="ImageCarousel">
+                <ul>                    
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image76.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image77.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image78.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image79.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image81.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image82.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image83.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Results
+            </h2>
+            <p>
+                The first batches were rough, but we steaily improved and acquired technique.  The numbered pieces are
+                the original batches.
+            </p>
+            <div class="ImageCarousel">
+                <ul> 
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image87.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image88.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image89.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image122.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image123.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image124.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image125.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image126.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Tech Expo Presentation
+            </h2>
+            <p>
+                We presented the project at a University of Cincinnati tech expo and received an honorable mention.
+                The completed machine is shown running demo cycles, with a large quantity of automated silk batches on display.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image90.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image91.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image92.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image93.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Interface
+            </h2>
+            <p>
+                We developed an application interface to control the machine, as well as a poster for presentation at the expo.
+                The poster was created in photoshop, while the interface was a simple frontend webpage.
+            </p>
+            <a href="/files/metrochrome%20poster.zip" class="BigBlueButton">
+                Download Design File
+            </a>
+             <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image127.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Dye%20Synthesizer/image128.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Program Logic
+            </h2>
+            <p>
+                Three standard layers of code are present on our controller;  one for interface, one for business logic, and one to pass messages
+                between the other two.  The interface is a simple web page that could be accessed remotely by another computer or phone.  It is
+                responsible for making AJAX calls to a python webservice hosted on the pi.  The webservice, in turn, opens a socket to 
+                a daemon thread that runs continously in the background.  The service can issue commands asynchronously to the daemon, 
+                which is threaded to enable concurrent control for each of the chambers.  The daemon manages all of the GPIO and sensors,
+                and will continuously monitor the incubation process even if no client is connected.  The communication and logic layers are available
+                for download.  Both layers use the Pyro framework to maintain the socket server that passes data.
+            </p>
+            <a href="/files/metrochrome%20code.zip" class="BigBlueButton">
+                Download Code
+            </a>
+            <h2>
+                Reflections:
+            </h2>
+            There are three areas in which I feel that the system fell short and could be improved:
+            <h3>
+                Use of Pneumatics
+            </h3>
+            <p>
+                The use of a common-line pressure system is both clever and very inexpensive.  It allows us to use a single inexpensive pump to 
+                run injection for a large number of dyes and agitation for a large number of chambers.  The use of a single compessor allows the system
+                to be expanded very cheaply and its formulation presented a great advantage early on in the process, when the full scope of possibilities
+                was less well defined.  While all of these advantages are still present, there are a number of drawbacks that cause me to reconsider this part of the design.
+                It is very difficult to find cheap hardware that is capable of adequately sealing a pressurized air system.  While we are able to 
+                produce a sealed system, it is high maintenance and has a dubious level of reliability.  We had many occasions, even late in the development cycle,
+                where the system would develop prominent leaks.  Having a fuel pump and regulator for every liquid line would have been more costly to
+                scale, but would have provided the reliability we needed, in addition to noise reduction.  It would also have necessitated an alternate
+                solution for the agitator.
+            </p>
+            <h3>
+                Pneumatic Agitation
+            </h3>
+            <p>
+                Pressurized air is an effective medium with which to agitate and diffuse liquid in a container.  There are also some issues with such a technique
+                that are make it unsuitable for our application.  Our initial understanding was that the primary purpose of agitation was to keep the dye concentration
+                evenly distributed and allow the fabric to absorb dye evenly.  What we failed to understand was that silk (particularly our high-threadcount duponi) 
+                is highly impermeable to fluids when wet, and acts as a membrane that captures air and stifles diffusion.  The level of heat present in our incubation
+                chambers causes vaporization of water that can result in the formation of air pockets which block the absorption of dye.  Our agitation system, which
+                relies on the injection of pressurized air through the fluid, only exacerbates this problem.  It causes uneven absorption on the two sides of the weave,
+                and can lead to splotchy colors.  In theory, using a fluid-pump would solve this problem, but our very small dye baths (~100mL) prevent this from being a 
+                practical solution as the pumps would likely not have enough fluid and may overheat.  The next best solution might be to use a tilt-mixer that would slope
+                the container to allow air pockets to escape.
+            </p>
+            <h3>
+                Addition of pH levelling system
+            </h3>
+            <p>
+                The system calculates and measures the amount of additives necessary to achieve the correct acidity given our fabric weight, but it fails to take into account
+                how the pH may be affected thoughout the cycle, as the dye is absorbed.  The age of the dye and purity of the water can also affect acidity.  To achieve 
+                optimal results and reduce the number of chemical pH levellers, it would be wise to add a monitoring system that could dispense additives as necessary to
+                keep a stable acidity throughout the cycle.
+            </p>
+        </article>
+        <article id="MicroOscilloscope">
+            <h1>Micro Oscilloscope <time datetime="2013-04">(2013)</time></h1>
+            <p>
+                The micro oscilloscope project is an extension of the Wideband Voltmeter documented in this section.  The oscilloscope does not possess 
+                any of the hardware for high-voltage AC, but instead focuses on interface, using some of the more interesting features of the controller kit.
+                <br />
+                The micro oscilloscope has a monochrome 128x64 OLED display.  The controller charts 1024 floating point values on the display, aggregating samples
+                where necessary to achieve an accurate and intuitive display with only 128x52 pixels available for the chart.  The scope has full support for triggers,
+                configurable sampling time and voltage ranges, as well as pausing for precise traces.  Maximum sample rate of 100Khz.
+            </p>
+            <a href="/files/Oscilloscope.zip" class="BigBlueButton">
+                Download Project Files
+            </a>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Micro%20Oscilloscope/image6.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Micro%20Oscilloscope/image5.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Micro%20Oscilloscope/image0.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Micro%20Oscilloscope/image0.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Micro%20Oscilloscope/image1.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Micro%20Oscilloscope/image2.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Micro%20Oscilloscope/image4.jpg")</li>
+                </ul>
+            </div>
+        </article>
+        <article id="WidebandVoltmeter">
+            <h1>Wideband Voltmeter <time datetime="2011-04">(2011)</time></h1>
+            <p>
+                The Auto-Ranging Voltage Meter was a project that I chose to design as part of a self-directed examination for a microsystems course. It was one of
+                my favorite and most functional projects, so I have published the documentation of its construction. The basic premise is that a cheap microcontroller
+                equipped with a low voltage ADC can be equipped to measure voltages well beyond its normal range, and can automatically tailor its resolution 
+                to fit the input waveform.
+            </p>
+            <h2>
+                How it Works:
+            </h2>
+            <p>
+                The design relies on a series of voltage dividers, each consecutive one tuned to reduce the input voltage by a factor of two. Each divider allows twice
+                the input voltage of the previous, without overextending the capabilities of the ADC. A zener diode is placed in parallel with each divider to insure
+                that the controller is not exposed to voltages above its tolerance. When one divider reaches this maximum voltage, the controller may select the analog
+                channel corresponding to the next divider. This allows the system to cascade upward while maintaining full voltage resolution. 
+                <br /><br />
+                The controller used in this project is the PIC 16F887, an 8-bit microcontroller with a 10-bit ADC and a bank of up to eight analog channels. Because of
+                the mismatch between ADC resolution and CPU word size, only the top or bottom 8-bits of any ADC result can normally be used. To overcome this task, and
+                because felt I like pulling out my own hair, I decided to utilize all ten bits afforded by the ADC. The 1024 available values conveniently matches up
+                well with the 1000 available values on the 7-segment bank selected for the project. However, because the microcontroller architecture only supports
+                8-bit processing, a special library had to be crafted to handle 16-bit operations. The selected hardware lacks the ability to perform multiplication
+                or division natively, and the compiler does not supply routines to emulate said functionality. Creating a full 16-bit arithmetic library on an 8-bit
+                architecture that only supports addition and subtraction was certainly the most challenging part of the project, but once completed was extremely helpful
+                in crafting the binary-to-BCD converter necessary to run the display bank. The logic and hardware for measuring the voltage was the simplest part of the
+                project, and presented few holdups. The photos provided present the design diagram for the hardware and a demonstration of the microcontroller running at
+                ~7 Volts, more than two volts above its maximum allowed input. The meter shown here was able to measure inputs of up to 20V without exceeding the range
+                of the device.
+            </p>
+            <a href="/files/autorangingvoltagemeter.zip" class="BigBlueButton">
+                Download Project Archive
+            </a>
+            <br /><br />
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Auto%20Ranging%20Voltage%20Meter/image1.png")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Auto%20Ranging%20Voltage%20Meter/image2.png")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Auto%20Ranging%20Voltage%20Meter/image3.png")</li>
+                </ul>
+            </div>
+        </article>
+        <article id="LineInputVoltmeter">
+            <h1>Line-In Voltmeter <time datetime="2010-07">(2010)</time></h1>
+            <h2>Design:</h2>
+            <p>
+                The line-in voltmeter is a partner to the Audio Relay Switch outlined below.  The two modules are intended to allow a vast number of computing devices
+                to interface with and control external hardware modules without the need for complex or hardware-dependent drivers. The 44Khz scope is designed to
+                receive a signal between +5 and 0 volts. It feeds this voltage through a resistor into the base of an NPN transistor. 
+                The transistor is attached to a 555 timer that outputs into the collector of the transistor. The effect is that the oscillator output is modulated
+                by the NPN transistor, and the resulting PWM signal is stepped down, but proportional in magnitude of the input voltage on the NPN. This DC-AC 
+                conversion is necessary because line inputs are equipped with a high-pass filter to attenuate DC current.
+            </p>
+            <h2>Results:</h2>
+            <p>
+                The device worked as intended, boasting 4-channels of input. I did not test at higher frequencies, as the current intended purpose did not call for 
+                it, but it was acceptable for measuring knobs, button pushes, and other voltage-dependent sensors.
+            </p>
+            <h2>Reflections:</h2>
+            <p>
+                This design has been dicontinued due to a few key flaws in its design. The common-ground BJT amplifiers become unreliable when targeting devices with high internal
+                resistance. The voltage-sensing resistor is set to 10k, and since the beta cannot be raised to accomodate a higher base resistor, the current will be too
+                skewed to accurately represent inputs.<br />
+                Another key flaw was external to the device. Inputs to computers are not well standardized. The resistance
+                of line inputs may vary between hardware, and many computers omit the line interface at all. It would have improved the design had I reserved two
+                of the op-amps for stabilizing DC-offset, rather than adding an additional two channels to the design. This would have allowed the device to operate
+                with microphone inputs in addition to line inputs, diversifying the available level of host hardware. Most computers do not possess more than one 
+                easily-accessible microphone or line input, so this tradeoff is generally favorable. 
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Analog%20Voltage%20Scope/image1.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Analog%20Voltage%20Scope/image2.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Analog%20Voltage%20Scope/image3.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Analog%20Voltage%20Scope/image4.jpg")</li>
+                </ul>
+            </div>
+        </article>
+        <article id="AudioRelaySwitch">
+            <h1>Audio Relay Switch <time datetime="2010-06">(2010)</time></h1>
+            <h2>Design:</h2>
+            <p>
+                This circuit is designed to receive a line output from a computer and, if the frequency falls within the appropriate range, power one of four relays.
+                The line inputs are each run through an RC bandpass filter into peak detector, which is then connected to the positive terminal of an op-amp comparator.
+                If the peak detector exceeds a certain voltage (adjustable), the comparator will activate the relay. Up to four signals may be operated simultaneously,
+                activatig all of the relays independently. 
+            </p>
+            <h2>
+                Results:
+            </h2>
+            <p>
+                The circuit was ultimately successful. The relays behaved as intended, switching very cleanly and quickly when the target frequency was received. 
+                Initially there was some difficulty as one of the relays broke after soldering. Half of the board needed to be unsoldered and resoldered in order to
+                find it. This resulted in a very messy soldering job, but a functional design. The device sometimes had difficulty switching all four relays at once,
+                and the relays may trigger each other if the reference voltage is improperly calibrated.
+            </p>
+            <h2>
+                Reflections:
+            </h2>
+            <p>
+                The device performed remarkably well. If I were to rebuild, I would have used a bigger circuit board so as not to layer PCBs. The layering
+                process created unnecessary complications for space and worsened the build quality. The target frequencies should have been spaced more evenly to
+                provide a greater overall voltage tolerance.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Switching%20Station/image1.png")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Switching%20Station/image2.png")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Switching%20Station/image3.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Switching%20Station/image4.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Switching%20Station/image5.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Switching%20Station/image6.jpg")</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+    <section id="ComputerScience">
+        <h1>Computer Science</h1>
+        <article id="Thumbnailer">
+            <h1>Thumbnailer <time datetime="2013">(2013-</time><time datetime="2014">2014)</time></h1>
+            <p>
+                As this site has grown and developed over the years, it has become increasingly cumbersome to continue producing thumbnails for all of the hundreds of images contained herein. 
+                Thumbnailer began as a simple WPF .NET app used to generate simple bitmap images and has grown into a useful and intelligent image processing module.  It's most recent incarnation has
+                been deployed on this site, dynamically generating and caching any image requests.  A simple demonstration is available:
+                <br />
+                Please note:  Many image parameters have been hidden and are not available in this demonstration.
+            </p>
+            <form id="ThumbnailerDemo">
+                <div>
+                    <div>
+                        <label for="DemoWidth">Width:</label>
+                        <input id="DemoWidth" type="text" value="600" />
+                    </div>
+                    <div>
+                        <label for="DemoHeight">Height:</label>
+                        <input id="DemoHeight" type="text" value="450" />
+                    </div>
+                    <div>
+                        <span id="TypeLabel">Type:</span>
+                        <label for="DemoSkew">Skew</label>
+                        <input id="DemoSkew" type="radio" name="type" value="skew" checked="checked"/>
+                        <label for="DemoFill">Fill</label>
+                        <input id="DemoFill" type="radio" name="type" value="fill" />
+                        <label for="DemoBars">Bars</label>
+                        <input id="DemoBars" type="radio" name="type" value="bars" />
+                        <label for="DemoNoBars">No Bars</label>
+                        <input id="DemoNoBars" type="radio" name="type" value="nobars" />
+                    </div>
+                    <input type="button" value="Nail It" />
+                    <input type="button" value="Reset" />
+                    <div id="DemoError">
+                        
+                    </div>
+                </div>
+                <img src="/images/Thumbnailer/testkitten.jpg" alt="Not my kitty." title="Not my kitty." />
+            </form>
+        </article>
+         <article id="DataCompressor">
+            <h1>Data Compressor <time datetime="2011-05">(2011-</time><time datetime="2012-08">2012)</time></h1>
+            <p>
+                A year-and-a-half ago, I came across the <a href='http://prize.hutter1.net/' target="_blank">Hutter Project</a>, an ongoing contest to reversably reduce a 100MB sample of wikipedia to the smallest file possible.
+                This lead me to try my hand at developing a generalized data-compression algorithm; to try to win some of that sweet cash prize.  I didn't win, but I did develop a working algorithm as well as
+                a neat set of C++ libraries for manipulating and analyzing binary data.  If you have an interest, I encourage you to download the project and play around with it.  The project file does require a
+                newer version of Visual Studio, but all of the components are either standard or homebrewed.  You should be able to copy the source files over and relink under just about any platform.
+            </p>
+	        <a href="/Files/CIDER%2008-22-12.zip" class="BigBlueButton">
+		        Download Update 8/22/12
+	        </a>
+	        <br/>
+	        <a href="/Files/CIDER%205-12-12.zip" class="BigBlueButton">
+		        Download Update 5/12/12
+	        </a>
+	        <br/>
+	        <a href="/Files/cpplib%205-10-11.zip" class="BigBlueButton">
+		        Download Update 5/10/11
+	        </a>
+        </article>
+        <article id="ZombieCop">
+            <h1>Zombie Cop <time datetime="2009">(2009-</time><time datetime="2011">2011)</time></h1>
+            <div id="ViewGame">
+                <div class="BigBlueButton">View Game</div>
+                <object data="/files/zombiecop.swf" type="application/x-shockwave-flash" width="500" height="500">
+                    <param value="/files/zombiecop.swf" name="movie"/>
+                </object>
+            </div>
+            <p>
+                Zombie Cop was in development for about 3 years, sporadically, and has received around 400 thousand views to date.  For this project, I had to learn Actionscript 3,
+                as well as Object Oriented Programming styles and syntax.  The class-based approach improved my code quality and reusability greatly, and contributed greatly to the
+                quality of the final product.
+                <br/><br />
+                The framework is far more robust than any of my previous programming projects.  The game uses a heavily optimized and advanced pathing algorithm.  It can handle up to
+                50 units in realtime while maintaining optimal performance.  The pathing algorithm is built upon a robust set of classes for processing two-dimensional vectors.  The
+                vector classes are responsible for collision detection and unit targeting.  Layered upon that is the unit AI library, which is simple, but stable and performs well.
+                The game is rendered entirely with a bitmap blitting camera system, for efficient use of visual resources.  I did not assemble any of the graphics in the Adobe Flash
+                IDE or a similar visual editor.  I instead embedded bitmaps and animated them using custom clip-management classes.
+            </p>
+            <a class="BigBlueButton" href="/files/zombiecop.zip">
+                Download Source (FlashDevelop)
+            </a>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Zombie%20Cop/image1.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Zombie%20Cop/image2.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Zombie%20Cop/image5.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Zombie%20Cop/image3.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Zombie%20Cop/image4.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Zombie%20Cop/image6.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Zombie%20Cop/image7.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Zombie%20Cop/image8.jpg")</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+    <section id="Automotive">
+        <h1>Automotive</h1>
+        <article id="CVTTransmission">
+            <h1>CVT Transmission <time datetime="2013-10">(2013)</time></h1>
+            <p>
+                This is a design for a ratcheting-type Continuously Variable Transmission (CVT) transmission I put together as a fun exercise.
+                Unlike a traditional transmission, which has multiple fixed speeds and a coupling device (clutch, torque converter, etc), this
+                CVT has an infinite number of possible ratios, all made possible by a rotary-linear-rotary conversion process that does not 
+                require the use of a frictional coupler.  The desired gear ratio is selected by applying light pressure to one of two clutch rings located
+                on the side of a giant screw.  The rings themselves do not transmit power and require only a small amount of frictional force to rotate
+                the central worm gear.  The worm gear changes the gear ratio of the input shaft, whose linear motion is converted back into rotary motion by
+                a secondary output gear.
+                <br />
+            </p>
+            <h2>Design Flaws:</h2>
+            <ul>
+                <li>
+                    The reciprocating motion of the rotary-linear-rotary conversion process supplies sinusoidal torque,
+                    which generates an excessive amount of vibration and variable power output.
+                </li>
+                <li>
+                    The clutch rings only allow differential alterations to the gear ratio, much like a sequential gearbox.
+                    Applying pressure to a ring moves the ratio, but pressure itself is not correlated with the output.
+                </li>
+                <li>
+                    There is a certain amount of slippage between rotations (when the sinusoid hits zero or 180), and I'm not confident
+                    that the current design handles this well enough.
+                </li>
+                <li>
+                    The gear ratio may not be changed if the input shaft is not in motion.
+                </li>
+            </ul>
+            <p>
+                All models were created in Autodesk Inventor 2013, and are available for review.  A second revision is underway that resolves all of the listed
+                design flaws.
+            </p>
+            <a class="BigBlueButton" href="/files/CVT-rev1.zip">
+                Download CAD Models
+            </a>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/CVT/image2.png")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/CVT/image1.png")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/CVT/image7.png")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/CVT/image3.png")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/CVT/image4.png")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/CVT/image5.png")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/CVT/image6.png")</li>
+                </ul>
+            </div>
+        </article>
+        <article id="HondaS2000">
+            <h1>Honda S2000 <time datetime="2013-09">(2013)</time></h1>
+            <p>
+                In July of 2013, I acquired a Honda S2000 with the intent to repair and resell. After a short period of
+                driving, some new mechanical problems surfaced that rendered the vehicle undriveable. I created a guide to help 
+                document and diagnose the issues as I worked through it.
+            </p>
+            <h2>
+                Timing Chain Tensioner
+            </h2>
+            <p>
+                The timing chain was rattling very badly when I acquired the car.  Apparently, it is common for the worm gears
+                in the tensioners to wear down and lose oil pressure, so I acquired a modified tensioner from 
+                S2000 expert Billman, and this is me tearing down the old tensioner to try and figure out what modifications
+                he made.  There were no noticeable changes other than mediablasting the old gear.  My theory is that he also 
+                heat-treated it to harden the material and prevent wear over time.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Honda%20S2000/image29.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Honda%20S2000/image30.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Honda%20S2000/image31.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Honda%20S2000/image32.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Honda%20S2000/image33.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Honda%20S2000/image34.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Camshaft Failure
+            </h2>
+            <h2>The Symptoms:</h2>
+            <p>
+                The engine siezed after 30 miles of driving at 70MPH on the highway.  The engine would crank, but not start, and immediately threw a P1367 code, for a faulty Camshaft Position (Top Dead Center) TDC Sensor .
+                TDC sensors are used to determine the position of the camshafts in the engine, and are essentially magnetic relays that signal when a notch on the camshaft completes a rotation.
+            </p>
+            <h2>Diagnosis:</h2>
+            <p>
+                The first thing I did was test the TDC sensors and wiring, to insure that there weren't any electrical faults.  The sensor bolts were tight and resistance of the sensors was normal,
+                between 2.2K and 2.4k.  (Factory spec is 1.85k-2.45k)
+                <br/>
+                Poor engine timing can also be a cause for a no-start condition, and may throw the same CEL error code.  I removed the valve cover and moved the crankshaft to its TDC timing mark.
+                Ran into some maintenance items after taking everything taken apart.  Dirty air filter and bad spark plug seals.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image1.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image10.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image11.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image24.jpg")</li>
+                </ul>
+            </div>
+            <h2>Timing:</h2>
+            <p>
+                I removed the tensioner and took a look.  The chain timing appears to be aligned, enough that it would not cause the engine to sieze.
+                I did notice the intake notch was off by a tooth.  The notches that appear on each camshaft gear should be parallel, but the intake (right) is pointing slightly upward.
+                To address the issue, I would simply need to remove the upper journals and move the camshafts into their correct positioning.  
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image2.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image3.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image4.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image5.jpg")</li>
+                </ul>
+            </div>
+            <h2>Discovery:</h2>
+            <p>
+                Notice that the intake camshaft is practically dry when compared to the exhaust camshaft.  There is clearly an issue with the oil delivery system that caused the camshaft to sieze and halt the engine.
+                <br/>
+                Unfortunately, the intake camshaft and journals have been rendered useless.  Without oil, the camshaft superheated, warped the journals and shredded its own surface.  In the following images, the 
+                left journals are the intake, and right are the exhaust.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image6.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image7.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image8.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image9.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image12.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image13.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image15.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image16.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image17.jpg")</li>
+                </ul>
+            </div>
+            <h2>The Culprit:</h2>
+            <p>
+                During the last engine service, the center camshaft bolt was not torqued down properly.  It wasn't even finger-tight when I got to it.
+                If the bolt gets loose, it will leak oil and the head will not receive pressure.  This leads to oil starvation which eventually destroys
+                the camshafts. The intake camshaft usually goes first because it sits about an inch higher than the exhaust.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image18.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image14.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Solution:
+            </h2>
+            <p>
+                I managed to swing a deal on a used engine that was supposedly knocking.  The journals are modular so I didn't need to replace the
+                entire head.  I simply swapped over the new cams and reset the timing.  This engine is fairly unique in that the timing chain connects
+                the crank gear to a central cam gear, and that is then connected to the shafts. This means that the timing can all be completely
+                reworked without removing the head.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image19.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image20.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image21.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image22.jpg")</li>
+                </ul>
+            </div>
+            <h2>
+                Extras:
+            </h2>
+            <p>
+                A quick valve adjustment to get things back in order, and I took care of the neglected maintenance items.  New spark plug seals, air filter, 
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image25.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image26.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image27.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image28.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/honda%20s2000/image23.jpg")</li>
+                </ul>
+            </div>
+        </article>
+        <article id="NissanVersa">
+            <h1>Nissan Versa <time datetime="2012-07">(2012)</time></h1>
+            <p>
+                In July of 2012 acquired a 2008 Nissan Versa with a misfiring engine.  This project details the process that lead to my diagnosis and repair of the vehicle.
+            </p>
+            <h2>Intake Manifold:</h2>
+            <p>
+                Starting off, found a mouse nest in the engine compartment, just under the intake manifold and over the fuel injectors and ignition coils.  Could have been an electrical problem if a
+                rodent had been munching on the wires.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image1.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image2.jpg")</li>
+                </ul>
+            </div>
+            <h2>Early Testing:</h2>
+            <p>
+                During the initial diagnostic phases, I had to determine the cause of the cylinder #2 misfire, as indicated by the vehicle's ECU.  I ran compression, leakdown, and liquid tests to confirm 
+                that the problem was a leaky valve, rather than a bad piston ring.  A leaky valve can be fixed, but bad piston rings essentially require a new engine.
+            </p>
+            <div class="VideoCarousel">
+                <ul>
+                    <li data-youtubeid="OXR1Jq5GG9A">@ImageResizeController.MergeThumbnail(new string[]{"/images/Nissan Versa/video1.jpg", "/images/video button overlay.png"}, 0.5, 0.5, ImageFormat.Jpeg)</li>
+                    <li data-youtubeid="zXf6sMkiOtw">@ImageResizeController.MergeThumbnail(new string[]{"/images/Nissan Versa/video2.jpg", "/images/video button overlay.png"}, 0.5, 0.5, ImageFormat.Jpeg)</li>
+                </ul>
+            </div>
+            <h2>Timing Chain Cover:</h2>
+            <p>
+                Removing the cover was extremely difficult because of the low-clearance.  Someone with the proper equipment would have just pulled the engine out of the car.  The photos below are taken
+                during removal of the alternator, serpentine belt tensioner, and timing chain cover plate, respectively.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                      <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image3.jpg")</li>
+                      <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image4.jpg")</li>
+                      <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image5.jpg")</li>
+                      <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image6.jpg")</li>
+                      <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image7.jpg")</li>
+                      <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image8.jpg")</li>
+                </ul>
+            </div>
+            <h2>Timing Chain Disassembly:</h2>
+            <p>
+                Shots of both the upper and lower timing chains.  The colored chain links are used to set the timing, so it's important to make sure you've got the engine cranked to the starting stroke.
+                The engine is not set to its first stroke in these pictures.  The last two shots were taken just before removal of the camshafts.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                      <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image9.jpg")</li>
+                      <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image10.jpg")</li>
+                      <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image11.jpg")</li>
+                      <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image12.jpg")</li>
+                      <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image13.jpg")</li>
+                      <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image14.jpg")</li>
+                </ul>
+            </div>
+            <h2>Removing the Gasket Compound:</h2>
+            <p>
+                I soaked the camshaft cover in an acetone solution to loosen up the liquid gasket.  It didn't work very well.  The last two shots are a before/after of me cleaning up the timing chain cover
+                with a scour pad and a plastic fork.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image15.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image16.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image17.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image18.jpg")</li>
+                </ul>
+            </div>
+            <h2>Dealing with broken bolts.</h2>
+            <p>
+                Two of the bolt heads stripped raw during disassembly, so I had to file and grind them down before they could be removed.  The last two shots are a real treat.  After having the holes
+                drilled out and rethreaded by a machine shop, the brand new bolt I had just ordered from the deslership snaps off in the cylinder head.  I decided it must not have been that important.
+            </p>
+            <h2>Moral of the story:</h2>
+            <p>
+                Never ever ever use a 12-point socket.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image19.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image20.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image21.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image22.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image23.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image24.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image25.jpg")</li>
+                </ul>
+            </div>
+            <h2>Cylinder Head:</h2>
+            <p>The camshafts have been taken off and I'm prepping to remove the Torx head bolts.  I took some shots of the valve spring buckets and the springs themselves.</p>
+            <div class="ImageCarousel">
+                <ul>       
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image26.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image27.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image28.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image29.jpg")</li>
+                </ul>
+            </div>
+            <h2>Exhaust Manifold:</h2>
+            <p>
+                Some shots of the exhaust manifold cover.  The second pictures is of the underside of the car, where the exhaust flows.  I had to undo the five bolts that hold the manifold to the back
+                side of the engine, in order to remove the head.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image30.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image31.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image32.jpg")</li>
+                </ul>
+            </div>
+            <h2>Cylinder Head Removed:</h2>
+            <p>
+                  The first three photos show the engine block and exhaust manifold without the cylinder head. Those big round holes are  **<b>THE</b>** cylinders you've likely
+                  heard so much about.  The fourth photo is of the coolant thermostat.  The last one is a 1/2 inch ratchet extension that snapped while taking the head bolts off.
+            </p>
+            <h2>Moral of the story:</h2>
+            <p>
+                If it doesn't come with a double lifetime warranty, it's junk.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image33.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image34.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image35.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image36.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image37.jpg")</li>
+                </ul>
+            </div>
+            <h2>Inspecting the Cylinder Head:</h2>
+            <p>
+                A cylinder head that has been separated from the engine.
+            </p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image38.jpg")</li>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image39.jpg")</li>
+                </ul>
+            </div>
+            <h2>Cylinder Head Inspection: </h2>
+            <p>
+                  After removing the cylinder head, liquid tests revealed that the exhaust valve was a worse culprit than the leaky intake valve.  The videos demonstrate the test results.  Guess which valves are leaky?
+            </p>
+            <div class="VideoCarousel">
+                <ul>
+                    <li data-youtubeid="7oppHq9m5jk">@ImageResizeController.MergeThumbnail(new string[]{"/images/Nissan Versa/video3.jpg", "/images/video button overlay.png"}, 0.5, 0.5, ImageFormat.Jpeg)</li>
+                    <li data-youtubeid="IBN0aX9UPy8">@ImageResizeController.MergeThumbnail(new string[]{"/images/Nissan Versa/video4.jpg", "/images/video button overlay.png"}, 0.5, 0.5, ImageFormat.Jpeg)</li>
+                </ul>
+            </div>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image40.jpg")</li>
+                </ul>
+            </div>
+            <p>The refinished head mounted in its rightful position.</p>
+            <div class="ImageCarousel">
+                <ul>
+                    <li>@ImageResizeController.Thumbnail("/images/Nissan%20Versa/image41.jpg")</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+</body>
+</html>
