@@ -11,9 +11,8 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
-    <meta name="description" content="Joel Evans is an engineering consultant located in Cincinnati, OH.  He is a senior level software developer
-            with experience in front and back-end web design, SQL, C# .NET and ASP.NET.  View his engineering portfolio, including
-            program code, automotive design, fabrication, and electronics.">
+    <meta name="description" content="Leading engineering consultant and contractor located in Cincinnati, OH.  Senior software developer
+            with experience in front and back-end web design, SQL, C# .NET and ASP.NET.  View engineering and software portfolio.">
     <meta charset="utf-8"> 
     <title>Joel R. Evans &mdash;Engineer Extraordinaire</title>
     <link href="/styles/index.css" rel="stylesheet" type="text/css"/>
@@ -56,6 +55,12 @@
                 <a href="#ComputerScience">Computer Science</a>
                 <ul>
                     <li>
+                        <a href="#CraigslistCrawler">Craigslist Crawler</a>
+                    </li>
+                    <li>
+                        <a href="#joelrevanscom">This Website</a>
+                    </li>
+                    <li>
                         <a href="#Thumbnailer">Thumbnailer</a>
                     </li>
                     <li>
@@ -86,11 +91,18 @@
     <section>
         <h1>Joel R. Evans</h1>
         <p>
-            I am Joel R. Evans, a software developer and engineer consultant currently located in Cincinnati, OH.
-            I have consulted for many companies in Cincinnati and have acquired a considerable amount of experience in a variety of disciplines.
-            My ability to combine different technologies allows me to fabricate and produce many functionally complete systems that would ordinarily require
-            the involvement of several specialists.  What follows is my portfolio of personal projects from the last few years.
+            Electrical engineer and senior level software developer located in Cincinnati, OH.  
+            Experience in front and back-end web design, SQL, .NET, embedded programming, circuit design, game design and fabrication.
+            Produce complete systems that would ordinarily require the involvement of several specialists.  
+            View my portfolio of projects.
         </p>
+    </section>
+    <section>
+        <h1 id="LatestUpdateButton">
+            <a href="#CraigslistCrawler">
+                Go to latest project &mdash; Craigslist Crawler
+            </a>
+        </h1>
     </section>
     <section id="Resume">
         <h1>Resume</h1>
@@ -708,6 +720,25 @@
     </section>
     <section id="ComputerScience">
         <h1>Computer Science</h1>
+        <article id="CraigslistCrawler">
+            <h1>Craigslist Crawler <time datetime="2015">(2015)</time></h1>
+            <p>
+                Craigslist Crawler originated as a simple application to check the local craigslist and send a notification if a particular deal was flagged.
+                It evolved into a highly optimized, massively concurrent windows service that crawls every city on the site for the purpose of performing market research
+                and analysis of human language.  Currently pulls 100,000+ listings per night given my current hardware and network setup.
+            </p>
+            <a class="BigBlueButton" href="https://github.com/joelrevans/Craiglist-Crawler" target="_blank">View Source on Github</a>
+        </article>
+        <article id="joelrevanscom">
+            <h1>joelrevans.com <time datetime="2014">(2014</time>-<time datetime="2015">2015)</time></h1>
+            <p>
+                The source code for this website is now available.  The site features clean, responsive HTML5, CSS3 and vanilla Javascript. All code is bespoke, no Jquery or extension frameworks.
+                Features hand built razor controls that automatically resize, encode, and embed images directly to reduce HTTP request overhead and reduce overall bandwidth for mobile users (see thumbnailer).
+            </p>
+            <a class="BigBlueButton" href="https://github.com/joelrevans/joelrevans.com" target="_blank">
+                View Source on Github
+            </a>
+        </article>
         <article id="Thumbnailer">
             <h1>Thumbnailer <time datetime="2013">(2013-</time><time datetime="2014">2014)</time></h1>
             <p>

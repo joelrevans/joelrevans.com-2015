@@ -237,6 +237,16 @@ nav li {
     color:white;
 }
 
+#LatestUpdateButton{
+    background-color:#6666FF;
+    margin:1em 0;
+}
+
+#LatestUpdateButton > a{
+    color:white;
+    text-decoration:none;
+}
+
 @media (max-width: 935px) {
     nav {
         padding-left:20px;
