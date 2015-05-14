@@ -17,8 +17,9 @@
     <meta http-equiv="Cache-control" content="public">
 
     <title>Joel R. Evans &mdash;Software Engineer Consultant Cincinnati</title>
-    <style>@WebEmbedHelper.EmbedTextFile("/styles/index.css");</style>
-    <style>@WebEmbedHelper.EmbedTextFile("/styles/photocarousel.css");</style>
+    <style>@WebEmbedHelper.EmbedTextFile("/styles/index.css")</style>
+    <style>@WebEmbedHelper.EmbedTextFile("/styles/photocarousel.css")</style>
+    <style>@WebEmbedHelper.EmbedTextFile("/Styles/resume.css")</style>
     <script>@WebEmbedHelper.EmbedTextFile("/Scripts/index.js")</script>
     <script>@WebEmbedHelper.EmbedTextFile("/Scripts/photocarousel.js")</script>
     <script>@WebEmbedHelper.EmbedTextFile("/Scripts/ganalytics.js")</script>
@@ -113,11 +114,11 @@
             <a href="/files/resume.docx" target="_blank"><img alt="DOCX" src="@ImageResizeController.GetDataURI("/images/doc-icon.png")"/></a>
 	        <a href="/files/resume.pdf" target="_blank"><img alt="PDF" src="@ImageResizeController.GetDataURI("/images/pdf-icon.png")" /></a>
 	        <a href="http://www.linkedin.com/pub/joel-evans/56/542/883" target="_blank"><img alt="LinkedIn" src="@ImageResizeController.GetDataURI("/images/linkedin-icon.png")" /></a>
-            <a href="/files/resume.html"><img alt="Printable" src="@ImageResizeController.GetDataURI("/images/print-icon.png")"></a>
+            <a href="/Resume"><img alt="Printable" src="@ImageResizeController.GetDataURI("/images/print-icon.png")"></a>
 	    </div>
-        <div id="ResumeContainer">
-	        <iframe id="ResumeEmbed" src="/files/resume.html"></iframe>
-        </div>
+        <section id="ResumeContainer">
+	        @Html.Partial("Resume")
+        </section>
     </section>
     <section id="ElectricalDesign">
         <h1>Electrical Design</h1>

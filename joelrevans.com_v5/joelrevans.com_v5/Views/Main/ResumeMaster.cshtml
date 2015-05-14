@@ -1,0 +1,18 @@
+﻿@{
+    Layout = null;
+}
+
+@using joelrevans.com_v5
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JOEL R. EVANS RESUME</title>
+
+    <style>@WebEmbedHelper.EmbedTextFile("/Styles/resume.css")</style>
+    <script>@WebEmbedHelper.EmbedTextFile("/Scripts/ganalytics.js")</script>
+</head>
+<body id="ResumeContainer">
+    @Html.Partial("Resume")
+</body>
+</html>

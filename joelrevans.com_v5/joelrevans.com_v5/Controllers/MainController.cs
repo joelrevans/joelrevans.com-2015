@@ -18,5 +18,10 @@ namespace joelrevans.com_v5.Controllers
         {
             return View();
         }
+
+        public ActionResult Resume()
+        {
+            return View("ResumeMaster");
+        }
     }
 }

@@ -15,23 +15,24 @@ img, iframe {
     border:none;
 }
 
-#Resume {
+#Resume #resumeIcons {
     text-align:center;
 }
 
-#ResumeContainer {
-    width:100%;
-    /*overflow:scroll;*/
+#ResumeContainer{
+    min-width:100%;
     -webkit-overflow-scrolling:touch;
     margin:10px 0;
+    max-height:7in;
+    overflow:auto;
 }
 
-#ResumeEmbed {
-    height:7in;
-    /*A fix for an iframe width bug present on IOS.*/
-    min-width:100%;
-    width:0px;
-    overflow:hidden;
+#ResumeContainer h1{
+    border:none;
+    padding:0;
+    background:none;
+    color:black;
+    font-weight:bold;
 }
 
 section > h1:first-child, article > h1:first-child {
@@ -78,10 +79,6 @@ section > section > h1:first-child {
     display:none;
     transition:max-height ease 1s;
     background:black;
-}
-
-#ResumeEmbed {
-    max-width:8.5in;
 }
 
 nav {

@@ -127,7 +127,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="files\resume.html" />
     <Content Include="googlea6af1df1ac0c3002.html" />
     <Content Include="images\Nissan Versa\video1.jpg" />
     <Content Include="images\Nissan Versa\video2.jpg" />
@@ -386,6 +385,7 @@
     <Content Include="Scripts\photocarousel.js" />
     <Content Include="Styles\index.css" />
     <Content Include="Styles\photocarousel.css" />
+    <Content Include="Styles\resume.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -437,6 +437,8 @@
     <Content Include="files\metrochrome code.zip" />
     <Content Include="files\zombiecop.zip" />
     <None Include="Properties\PublishProfiles\HostingFest.pubxml" />
+    <Content Include="Views\Main\Resume.cshtml" />
+    <Content Include="Views\Main\ResumeMaster.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
