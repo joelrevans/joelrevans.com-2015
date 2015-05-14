@@ -7,6 +7,10 @@
     padding:0 10px 20px 10px;
 }
 
+address{
+    font-style:normal;
+}
+
 img, iframe {
     border:none;
 }

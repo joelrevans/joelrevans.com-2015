@@ -121,6 +121,7 @@
     </Compile>
     <Compile Include="ImageCache.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebEmbedHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
