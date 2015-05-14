@@ -127,6 +127,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="files\resume.html" />
+    <Content Include="googlea6af1df1ac0c3002.html" />
     <Content Include="images\Nissan Versa\video1.jpg" />
     <Content Include="images\Nissan Versa\video2.jpg" />
     <Content Include="images\Nissan Versa\video3.jpg" />
@@ -379,6 +380,7 @@
     <Content Include="images\Zombie Cop\image6.jpg" />
     <Content Include="images\Zombie Cop\image7.jpg" />
     <Content Include="images\Zombie Cop\image8.jpg" />
+    <Content Include="Scripts\ganalytics.js" />
     <Content Include="Scripts\index.js" />
     <Content Include="Scripts\photocarousel.js" />
     <Content Include="Styles\index.css" />
